@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="num">
+    <button onclick="fun()">Check</button>
+    <script>
+        // const num=parseInt( prompt("Enter Number"))
+
+        function fun() {
+            const num = parseInt(document.getElementById("num").value);
+
+            let n1 = 0;
+            let n2 = 1;
+            let next;
+            let i = 0;
+            while (i < num) {
+                document.write(n1 + "  ");
+                next = n1 + n2; // 1  2
+                n1 = n2;   // 0 1    1
+                n2 = next;  // 1     2
+                i++
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
